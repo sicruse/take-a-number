@@ -1,0 +1,33 @@
+# Python
+**/__pycache__
+**/*.py[cod]
+**/*$py.class
+**/.pytest_cache
+**/.coverage
+**/htmlcov
+**/.tox
+**/.nox
+
+# Virtual Environment
+**/venv
+**/.venv
+**/env
+**/ENV
+
+# Development and IDE
+**/.git
+**/.gitignore
+**/.env
+**/.env.*
+**/.vscode
+**/.idea
+**/*.swp
+**/*.swo
+
+# Documentation and misc
+LICENSE
+README.md
+**/tests
+**/*.log
+**/.DS_Store
+**/Thumbs.db

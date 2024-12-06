@@ -1,0 +1,52 @@
+{
+    "name": "Sequence API Development",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python",
+    // "build": {
+    //     "dockerfile": "Dockerfile.dev",
+    //     "context": ".."
+    // },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-azuretools.vscode-docker"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.analysis.typeCheckingMode": "basic",
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                },
+                "editor.formatOnSave": true,
+                "editor.rulers": [
+                    88
+                ],
+                "files.trimTrailingWhitespace": true
+            }
+        }
+    },
+    "features": {
+        "ghcr.io/prulloac/devcontainer-features/chezmoi:1": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true,
+            "installOhMyZshConfig": true,
+            "upgradePackages": true,
+            "username": "automatic",
+            "userUid": "automatic",
+            "userGid": "automatic"
+        }
+    },
+    "forwardPorts": [
+        5000
+    ],
+    "postCreateCommand": "/bin/bash ./.devcontainer/post-install.sh",
+    "remoteUser": "vscode",
+    "mounts": [
+        "source=${localWorkspaceFolder}/sequences.json,target=/workspaces/sequence-api/sequences.json,type=bind"
+    ]
+}

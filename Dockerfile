@@ -9,7 +9,6 @@ RUN pip install -r requirements.txt
 
 # Copy application files
 COPY app.py .
-COPY sequences.json .
 
 # Expose the port
 EXPOSE 5000

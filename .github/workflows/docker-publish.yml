@@ -32,6 +32,8 @@ jobs:
       # This is used to complete the identity challenge
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
+      # Add security-events write permission if you're using container scanning
+      security-events: write
 
     steps:
       - name: Checkout repository
